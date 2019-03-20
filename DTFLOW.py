@@ -506,7 +506,11 @@ class DTFLOW():
             g_min = float("inf")
             j_min = 0
             for j,gb in enumerate(sub_branches):
+<<<<<<< HEAD
                 gb_min = np.min(-self.H[gp[1][-1],gb]) 
+=======
+                gb_min = np.min(self.T[gp[1][-1],gb])
+>>>>>>> 747bca77d3e7b043defbff12d712e09b7f827be3
         
                 if g_min > gb_min:
                     g_min = gb_min
