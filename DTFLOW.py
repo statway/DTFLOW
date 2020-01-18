@@ -208,7 +208,7 @@ class DTFLOW():
             elif slover == 'mds' or slover == 'MDS':
                 N = self.shape[0]
                 J = np.eye(N) - np.ones((N, N))/N
-                B = J * H * J
+                B = J @ H @ J
                 U, s, V = sparse.linalg.svds(B, k=dim)
                 Y = U * np.sqrt(s)
             
